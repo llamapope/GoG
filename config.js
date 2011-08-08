@@ -1,5 +1,6 @@
-// port the server will listen on (defaults to cloud9ide variable)
-exports.port = process.env.C9_PORT;
-
-// listens on all IP addresses
-exports.ip = '0.0.0.0';
+// Settings for the server
+// (defaults to cloud9ide variable for the port and listening on all IP addresses)
+exports = {
+    port: process.env.C9_PORT,
+    ip: '0.0.0.0'
+};
