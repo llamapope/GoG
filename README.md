@@ -5,6 +5,7 @@
 * express - [http://expressjs.com/]
 * jqtpl - [https://github.com/kof/node-jqtpl]
 * stylus - [http://learnboost.github.com/stylus/]
+
 ## QuickStart
 
 This portion of the quickstart is targeted to getting up and running using a free Cloud9IDE account.
