@@ -14,7 +14,7 @@ app.configure(function(){
     this.use(express.methodOverride());
     
     this.use(stylus.middleware({ 
-        src: __dirname + '/stylus', 
+        src: __dirname + '/src', 
         dest: config.staticFolder,
         compile: function(str) {
             return stylus(str).set('compress', true);
