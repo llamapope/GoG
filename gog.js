@@ -16,7 +16,6 @@ app.configure(function(){
     this.use(express.methodOverride());
     
     this.use(stylus.middleware({ 
-        debug: true,
         src: __dirname + '/stylus', 
         dest: __dirname + '/public',
         compile: function(str) {
