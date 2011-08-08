@@ -4,8 +4,6 @@ var config = require("./config.js");
 var express = require("express");
 var app = express.createServer();
 
-var staticFolder = __dirname + "/public";
-
 var stylus = require("stylus");
 
 app.configure(function(){
@@ -17,14 +15,14 @@ app.configure(function(){
     
     this.use(stylus.middleware({ 
         src: __dirname + '/stylus', 
-        dest: staticFolder,
+        dest: config.staticFolder,
         compile: function(str) {
             return stylus(str).set('compress', true);
         }
     }));
-    
+
     this.use(app.router);
-    this.use(express.static(staticFolder));
+    this.use(express.static(config.staticFolder));
 });
 
 app.get('/', function(req, res){
