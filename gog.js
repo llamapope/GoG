@@ -17,14 +17,14 @@ app.configure(function(){
     
     this.use(stylus.middleware({ 
         src: __dirname + '/stylus', 
-        dest: __dirname + '/public',
+        dest: staticFolder,
         compile: function(str) {
             return stylus(str).set('compress', true);
         }
     }));
     
     this.use(app.router);
-    this.use(express.static(__dirname + '/public'));
+    this.use(express.static(staticFolder));
 });
 
 app.get('/', function(req, res){
